@@ -11,12 +11,16 @@
     <h1>Greetings Card Generator</h1>
   </header>
   <div class="flex">
-    <div id="canvas-container"></div>
+    <div id="canvas-container">
+        <div class="image-cover">
+            <canvas id="myCanvas"></canvas>
+        </div> 
+    </div>
     <div id="sidebar">
       <form id="card-form">
         <div class="mb-4">
           <label for="username" class="block mb-2">User Name</label>
-          <input type="text" id="username" class="w-full p-2 border border-gray-300 rounded">
+          <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded">
         </div>
         <div class="mb-4">
           <label for="position_x" class="block mb-2">Position X</label>

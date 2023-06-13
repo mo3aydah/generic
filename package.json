@@ -9,7 +9,7 @@
     "ts-node-dev": "^2.0.0"
   },
   "scripts": {
-    "dev": "npx live-server",
+    "dev": "npm run build && npx live-server",
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && npx live-server"
   }
