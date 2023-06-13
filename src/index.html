@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Greetings Card Generator</title>
+    </head>
+    <body class="bg-slate-900 text-white">
+        <header class="bg-slate-800">
+            <div class="container mx-auto">
+                <h1 class="p-5 flex items-center justify-between w-full">
+                    <span class="text-5xl font-bold">Greetings Card Generator</span>
+                    <a class="hover:opacity-70" href="https://codewithahsan.dev">@mo9a7i</a>
+                </h1>
+            </div>
+        </header>
+        <section id="main">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-4 py-3 px-3 gap-3">
+                    <div class="lg:col-span-3 p-3 rounded-md bg-black">
+                        <div class="image-cover w-full">
+                            <canvas id="myCanvas" class="mx-auto"></canvas>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-1 p-3 rounded-md bg-slate-800">
+                        <form id="card-form form-underline">
+                            <div class="mb-4">
+                                <label for="username" class="block mb-2">User Name</label>
+                                <input type="text" id="name" class="w-full border-0 border-b-2 border-white bg-slate-700 border-gray-300 px-3 py-2 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="position_x" class="block mb-2">Position X</label>
+                                <input type="range" id="position_x" min="0" max="100" step="1" class="w-full" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="position_y" class="block mb-2">Position Y</label>
+                                <input type="range" id="position_y" min="0" max="100" step="1" class="w-full" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="font_size" class="block mb-2">Font Size</label>
+                                <input type="range" id="font_size" min="0" max="100" step="1" class="w-full" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="text_color" class="block mb-2">Text Color</label>
+                                <input type="color" id="text_color" class="w-full border-none" />
+                            </div>
+                            <button type="button" id="download-btn" class="w-full bg-green-300 hover:bg-green-400 p-3 rounded-md text-green-950 font-bold">Download Image</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="p-3">
+            <div class="container border-0 border-t-2 mx-auto border-grey">
+                <div class="p-3">
+                    <span class="text-gray-500">Copy rights text</span>
+                </div>
+                
+            </div>
+        </footer>
+
+        <script src="./bundle.js"></script>
+    </body>
+</html>

@@ -1,16 +1,23 @@
-const run = () =>{
+import "../css/index.css";
+
+const main = () => {
+    console.log('code from here');
+}
+
+main();
+
+const run = () =>{ 
     const canvas: any = document.getElementById('myCanvas');
     const context: any = canvas.getContext('2d')!;
-
     const inputField: any = document.getElementById("name");
-    const downloadCardButton = document.getElementById("downloadCard");
+    const downloadCardButton: any = document.getElementById("download-btn");
     let positionX: any = document.getElementById("position_x");
     let positionY: any = document.getElementById("position_y");
     let fontSize: any = document.getElementById("font_size");
     let fontColor: any = document.getElementById("text_color");
     
     const imageObj = new Image();
-    imageObj.src = "assets/images/card-image.jpg";
+    imageObj.src = "assets/imgs/cardy.png";
 
     imageObj.onload = () => {
         canvas.width = imageObj.width;
@@ -31,7 +38,7 @@ const run = () =>{
         const downloadLink = document.createElement("a");
         downloadLink.setAttribute("download", "jcdc-2023-adha-card.png");
 
-        canvas.toBlob((blob) => {
+        canvas.toBlob((blob: any ) => {
             const url = URL.createObjectURL(blob);
             downloadLink.setAttribute("href", url);
             downloadLink.click();
@@ -39,7 +46,7 @@ const run = () =>{
     }
    
     function redrawCanvas(){
-        alert('redraw')
+        console.log('redraw')
         const text = inputField.value;
 
         context.clearRect(0, 0, canvas.width, canvas.height);
@@ -60,11 +67,8 @@ const run = () =>{
     downloadCardButton.addEventListener("click", DownloadCanvasAsImage);
 }
 
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
-    alert('dom loaded')
+    //alert('dom loaded')
     run();
 });
   
