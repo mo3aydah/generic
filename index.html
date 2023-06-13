@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greetings Card Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Greetings Card Generator</h1>
+  </header>
+  <div class="flex">
+    <div id="canvas-container"></div>
+    <div id="sidebar">
+      <form id="card-form">
+        <div class="mb-4">
+          <label for="username" class="block mb-2">User Name</label>
+          <input type="text" id="username" class="w-full p-2 border border-gray-300 rounded">
+        </div>
+        <div class="mb-4">
+          <label for="position_x" class="block mb-2">Position X</label>
+          <input type="range" id="position_x" min="0" max="100" step="1" class="w-full">
+        </div>
+        <div class="mb-4">
+          <label for="position_y" class="block mb-2">Position Y</label>
+          <input type="range" id="position_y" min="0" max="100" step="1" class="w-full">
+        </div>
+        <div class="mb-4">
+          <label for="font_size" class="block mb-2">Font Size</label>
+          <input type="range" id="font_size" min="0" max="100" step="1" class="w-full">
+        </div>
+        <div class="mb-4">
+          <label for="text_color" class="block mb-2">Text Color</label>
+          <input type="color" id="text_color" class="w-full">
+        </div>
+        <button type="button" id="download-btn" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded">Download Image</button>
+      </form>
+    </div>
+  </div>
+  <script src="dist/script.js"></script>
+</body>
+</html>
