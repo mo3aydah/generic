@@ -1,4 +1,5 @@
 import '../css/index.css'
+import cardy from '../imgs/cardy.png';
 
 const main = () => {
     console.log('code from here');
@@ -17,7 +18,7 @@ const run = () =>{
     let fontColor: any = document.getElementById("text_color");
     
     const imageObj = new Image();
-    imageObj.src = "./src/assets/imgs/cardy.png";
+    imageObj.src = cardy.toString();
 
     imageObj.onload = () => {
         canvas.width = imageObj.width;
