@@ -1,4 +1,4 @@
-import "../css/index.css";
+import '../css/index.css'
 
 const main = () => {
     console.log('code from here');
@@ -17,7 +17,7 @@ const run = () =>{
     let fontColor: any = document.getElementById("text_color");
     
     const imageObj = new Image();
-    imageObj.src = "assets/imgs/cardy.png";
+    imageObj.src = "./src/assets/imgs/cardy.png";
 
     imageObj.onload = () => {
         canvas.width = imageObj.width;
